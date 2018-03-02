@@ -30,4 +30,41 @@ for (let i = 0; i < 10; i++) {
     console.log(i)
 }
 
-console.log(i)
+// console.log(i)
+
+
+// 暂时性死区
+
+// var tem = 1;
+//
+// if(true){
+//     tem = "134" //ReferenceError: tem is not defined
+//     let tem
+// }
+
+
+if (true) {
+    tem = "11"
+    console.log(tem)
+
+    // let tem //在let命令声明变量tmp之前，都属于变量tmp的“死区”。
+}
+
+typeof tem
+
+// let tem
+
+
+function die(x = y, y = 2) {
+    return [x, y]
+}
+
+// die() //error
+
+function die(x = 2, y = x) {
+    return [x, y]
+}
+
+die() //error
+
+console.log(die())
