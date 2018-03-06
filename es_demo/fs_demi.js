@@ -28,3 +28,16 @@ setTimeout(function(){
 
 
 event.listeners(1000)
+
+
+fs.stat('index.txt',function(err,stats){
+
+    if(err){
+        return console.error(err)
+    }
+
+    console.log(stats)
+    console.log('read success')
+    console.log(stats.isFile())
+    console.log(stats.isDirectory())
+})
