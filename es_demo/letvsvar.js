@@ -68,3 +68,43 @@ function die(x = 2, y = x) {
 die() //error
 
 console.log(die())
+
+
+function f() { console.log('I am outside!'); }
+
+(function () {
+    if (true) {
+        // 重复声明一次函数f
+        let a = function f() { console.log('I am inside!'); }
+        a()
+    }
+
+    f();
+}());
+
+{
+    let t = f();
+    t = t * t + 1;
+}
+// 'use strict'
+// let x = do {
+//     let t = f();
+//     t * t + 1;
+// };
+
+
+// 报错
+// let [foo] = 1;
+// let [foo] = false;
+// let [foo] = NaN;
+// let [foo] = undefined;
+// let [foo] = null;
+// let [foo] = {};
+
+let [x, y, z] = new Set(['a', 'b', 'c']);
+
+console.log(x)
+console.log(y)
+console.log(z)
+
+

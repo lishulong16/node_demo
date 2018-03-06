@@ -27,7 +27,24 @@ demo()
 //
 // console.log(a)
 // console.log(b)
+//
+// import 'aseert'
+//
+// aseert.deepEqual("1","1")
 
-import 'aseert'
 
-aseert.deepEqual("1","1")
+console.log(new Date('2012-12-12').getTime())
+console.log(new Date().toLocaleTimeString())
+
+console.log(new Date().valueOf())
+console.log(new Date().valueOf())
+
+
+console.log(typeof '2012-12-12')
+
+
+ i = Number('100')
+
+
+console.log(i)
+
